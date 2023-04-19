@@ -2,7 +2,7 @@
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
-
+console.log(generateMarkdown)
 
 
 // TODO: Create an array of questions for user input
@@ -59,7 +59,7 @@ const inquirer = require("inquirer");
   
     .then((data) =>{
         console.log(typeof data)
-        renderLicenseBadge(license);
+        
         fs.writeFile("newREADME.md", generateMarkdown(data), err =>{
             err? console.error(err):console.log("Your README has been created")
        
