@@ -12,15 +12,15 @@ function renderLicenseBadge(license) {
   switch (license) {
     case "Apache 2.0 License":
       // not sure 
-      badge =  apache;
+      badge = apache;
       break;
     case "GNU":
       // not sure 
-      badge =  GNU
+      badge = GNU
       break;
     case "MIT License":
       // not sure 
-      badge =  MIT
+      badge = MIT
       break;
     case "BSD2 License":
       // not sure 
@@ -43,27 +43,38 @@ function renderLicenseSection(license) { }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  # Description 
+  ![badge](${apache})
+  ## Description 
   ${data.description}
 
-  # Table of Contents 
+  ## Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-  # Installation
-  ${data.installation}
 
-  # Usage
-  ${data.usage}
+## Installation
+${data.installation}
 
-  # License
-  ${data.license}
+## Usage
+${data.usage}
 
-  # Contributing 
+## License
+${data.license}
+
+## Contributing 
 ${data.contribution}
 
-  # Tests
+## Tests
 ${data.test}
-  # Questions
 
+## Questions
+Checkout my other repos: [GitHub Profile](https://github.com/${data.username})
+
+Contact me: [email](mailto:${data.email})
 `;
 }
 

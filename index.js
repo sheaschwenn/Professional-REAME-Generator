@@ -10,6 +10,11 @@ const inquirer = require("inquirer");
     .prompt([
         {
             type: 'input',
+            message: "What is your GitHub username?",
+            name: 'username'
+        },
+        {
+            type: 'input',
             message: "What is your project's title?",
             name: 'title'
         },
@@ -37,6 +42,11 @@ const inquirer = require("inquirer");
             type: 'input',
             message: "What are the test instructions for your project?",
             name: 'test'
+        },
+        {
+            type: 'input',
+            message: "What is the best email to contact you at?",
+            name: 'email'
         }
     ])
     .then((data) =>{
