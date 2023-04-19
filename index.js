@@ -40,7 +40,8 @@ const inquirer = require("inquirer");
         }
     ])
     .then((data) =>{
-        fs.writeFile("newREADME.md", JSON.stringify(data), err =>{
+        console.log(typeof data)
+        fs.writeFile("newREADME.md", generateMarkdown(data), err =>{
             err? console.error(err):console.log("Your README has been created")
        
         })
@@ -49,7 +50,7 @@ const inquirer = require("inquirer");
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
- generateMarkdown(data)
+ 
 }
 
 // TODO: Create a function to initialize app
