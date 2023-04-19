@@ -4,6 +4,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
 
 
+
 // TODO: Create an array of questions for user input
 // const questions = [
     inquirer
@@ -47,10 +48,18 @@ const inquirer = require("inquirer");
             type: 'input',
             message: "What is the best email to contact you at?",
             name: 'email'
+        },
+        {
+            type:'list',
+            message:'Which license would you like your project to have?',
+            choices:['Apache 2.0 License','GNU','MIT License','BSD2 License'],
+            name:'license'
         }
     ])
+  
     .then((data) =>{
         console.log(typeof data)
+        renderLicenseBadge(license);
         fs.writeFile("newREADME.md", generateMarkdown(data), err =>{
             err? console.error(err):console.log("Your README has been created")
        
