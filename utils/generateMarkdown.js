@@ -1,11 +1,6 @@
-//  badges 
 
-// const apache = 'https://img.shields.io/badge/License-Apache_2.0-blue.svg';
-// const GNU = 'https://img.shields.io/badge/License-GPLv3-blue.svg';
-// const MIT = 'https://img.shields.io/badge/License-MIT-yellow.svg';
-// const BSD2 = 'https://img.shields.io/badge/License-BSD_2--Clause-orange.svg';
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// switch statement saying if the user picks any of these licenses then use this url to render badge
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   const apache = 'https://img.shields.io/badge/License-Apache_2.0-blue.svg';
@@ -15,49 +10,49 @@ function renderLicenseBadge(license) {
   let badge;
   switch (license) {
     case "Apache 2.0 License":
-      // not sure 
       badge = apache;
       break;
     case "GNU":
-      // not sure 
       badge = GNU
       break;
     case "MIT License":
       badge = MIT
       break;
     case "BSD2 License":
-      // not sure 
       badge = BSD2
       break;
+    // if "none" is chosen then return an empty string for url
     default:
       return ""
 
   }
+  // if a license was chosen then return that badge url to render a badge on the page
   return `![License badge](${badge})`
 }
 
-// TODO: Create a function that returns the license link
+// if license is not none then we get a link for the table of contents for a license 
 // If there is no license, return an empty string
-function renderLicenseLink(license) { 
-  if(license === 'none'){
+function renderLicenseLink(license) {
+  if (license === 'none') {
     return ''
   }
-    return `* [License](#license)`
-  }
+  return `* [License](#license)`
+}
 
 
-// TODO: Create a function that returns the license section of README
+// if a license is chosen then a license section is rendered in the readme with the license that the user chose
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(license === 'none'){
+  if (license === 'none') {
     return ''
   }
-  return`## License
+  return `## License
   ${license}
   For more information please refer to LICENSE in the repo`
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate the markdown with dynamically created variables based on the users input
+// calls license functions to also dynamically generate functions
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
@@ -90,11 +85,12 @@ ${data.test}
 ${renderLicenseSection(data.license)}
 
 ## Questions
-Checkout my other repos: [GitHub Profile](https://github.com/${data.username})
+Checkout my other repos: [${data.username}](https://github.com/${data.username})
 
 Contact me with any questions at [${data.email}](mailto:${data.email})
 `;
 }
 
+// exports the generate markdown function so that it is accessable in other js files
 module.exports = generateMarkdown;
 

@@ -1,7 +1,7 @@
-# dfe
-  ![License badge](https://img.shields.io/badge/License-GPLv3-blue.svg)
+# README generator
+  ![License badge](https://img.shields.io/badge/License-MIT-yellow.svg)
   ## Description 
-  dfe
+  A professional README generator
 
   ## Table of Contents 
 * [Installation](#installation)
@@ -13,24 +13,24 @@
 
 
 ## Installation
-dfe
+npm i
 
 ## Usage
-dfe
+to generate a professional readme
 
 
 
 ## Contributing 
-dsfe
+none for now
 
 ## Tests
-se
+none
 
 ## License
-  GNU
+  MIT License
   For more information please refer to LICENSE in the repo
 
 ## Questions
-Checkout my other repos: [GitHub Profile](https://github.com/sheaschwenn)
+Checkout my other repos: [sheaschwenn](https://github.com/sheaschwenn)
 
 Contact me with any questions at [me@me.com](mailto:me@me.com)

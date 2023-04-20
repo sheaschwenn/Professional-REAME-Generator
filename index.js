@@ -1,12 +1,11 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
-console.log(generateMarkdown)
 
 
-// TODO: Create an array of questions for user input
-// const questions = [
+
+// Using inquirer to prompt user
     inquirer
     .prompt([
         {
@@ -56,24 +55,14 @@ console.log(generateMarkdown)
             name:'license'
         }
     ])
-  
+//   getting the user info and rendering it into a markdown file
     .then((data) =>{
-        console.log(typeof data)
-        
+        // generating a markdown file using fs and generateMarkdown function from generateMarkdown.js
         fs.writeFile("newREADME.md", generateMarkdown(data), err =>{
             err? console.error(err):console.log("Your README has been created")
        
         })
     })
-// ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
- 
-}
 
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
-init();
