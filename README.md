@@ -11,7 +11,8 @@ Application that generates a professional README based on a users input
 | Inquirer | [https://www.npmjs.com/package/inquirer/v/8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4)     |       
 
 ## Description 
-[Walk through demo](https://watch.screencastify.com/v/B6tC5HSeR6gNz0tii2kx)
+[Walk through demo](https://drive.google.com/file/d/1H2RqdB3myQ1tuEnRxLLBfRCoux-nFV2j/view)
+
 
 This application generates a professional README by taking users input by utilizing inquirer.  The users inputs are rendered into a README markdown file following good README practices.  
 
