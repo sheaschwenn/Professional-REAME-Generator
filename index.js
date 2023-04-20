@@ -52,7 +52,7 @@ console.log(generateMarkdown)
         {
             type:'list',
             message:'Which license would you like your project to have?',
-            choices:['Apache 2.0 License','GNU','MIT License','BSD2 License'],
+            choices:['Apache 2.0 License','GNU','MIT License','BSD2 License','none'],
             name:'license'
         }
     ])

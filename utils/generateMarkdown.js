@@ -33,28 +33,41 @@ function renderLicenseBadge(license) {
       return ""
 
   }
-  return badge
+  return `![License badge](${badge})`
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) { 
+  if(license === 'none'){
+    return ''
+  }
+    return `* [License](#license)`
+  }
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+  if(license === 'none'){
+    return ''
+  }
+  return`## License
+  ${license}
+  For more information please refer to LICENSE in the repo`
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ![License badge](${renderLicenseBadge(data.license)})
+  ${renderLicenseBadge(data.license)}
   ## Description 
   ${data.description}
 
   ## Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+${renderLicenseLink(data.license)}
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -66,8 +79,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-## License
-${data.license}
+
 
 ## Contributing 
 ${data.contribution}
@@ -75,10 +87,12 @@ ${data.contribution}
 ## Tests
 ${data.test}
 
+${renderLicenseSection(data.license)}
+
 ## Questions
 Checkout my other repos: [GitHub Profile](https://github.com/${data.username})
 
-Contact me: [email](mailto:${data.email})
+Contact me with any questions at [${data.email}](mailto:${data.email})
 `;
 }
 

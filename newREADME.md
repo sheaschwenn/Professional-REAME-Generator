@@ -1,7 +1,7 @@
-# adfoaiej
-  ![badge](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)
+# dfe
+  ![License badge](https://img.shields.io/badge/License-GPLv3-blue.svg)
   ## Description 
-  adoffije
+  dfe
 
   ## Table of Contents 
 * [Installation](#installation)
@@ -13,21 +13,24 @@
 
 
 ## Installation
-adofiej
+dfe
 
 ## Usage
-oine
+dfe
 
-## License
-BSD2 License
+
 
 ## Contributing 
-one
+dsfe
 
 ## Tests
-oe
+se
+
+## License
+  GNU
+  For more information please refer to LICENSE in the repo
 
 ## Questions
-Checkout my other repos: [GitHub Profile](https://github.com/dfeoj)
+Checkout my other repos: [GitHub Profile](https://github.com/sheaschwenn)
 
-Contact me: [email](mailto:ode)
+Contact me with any questions at [me@me.com](mailto:me@me.com)
